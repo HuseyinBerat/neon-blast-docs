@@ -3,98 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support & Help Center - Neon Block Blast</title>
+    <title>Support - Cyber Grid: Neon Puzzle</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Outfit', sans-serif;
-            line-height: 1.6;
-            color: #e2e8f0;
-            background: #0b0f19;
-            margin: 0;
-            padding: 40px 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #131b2e;
-            padding: 36px;
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        }
+        body { font-family: 'Outfit', -apple-system, sans-serif; line-height: 1.6; color: #e2e8f0; background: #0b0f19; margin: 0; padding: 40px 20px; }
+        .container { max-width: 800px; margin: 0 auto; background: #131b2e; padding: 36px; border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); }
         h1 { color: #00f2fe; font-size: 2.2rem; margin-top: 0; }
-        h2 { color: #38bdf8; font-size: 1.3rem; margin-top: 24px; }
+        h2 { color: #38bdf8; font-size: 1.3rem; margin-top: 30px; }
+        h3 { color: #e2e8f0; font-size: 1.05rem; margin: 20px 0 4px; }
         p, li { color: #94a3b8; font-size: 0.98rem; }
-        .faq-item {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            border-radius: 10px;
-            padding: 16px 20px;
-            margin-bottom: 14px;
-        }
-        .faq-title { color: #ffffff; font-weight: 700; font-size: 1.05rem; margin-bottom: 6px; }
-        .contact-card {
-            background: linear-gradient(135deg, rgba(0, 242, 254, 0.15), rgba(0, 119, 254, 0.15));
-            border: 1px solid #00f2fe;
-            border-radius: 12px;
-            padding: 24px;
-            margin-top: 30px;
-            text-align: center;
-        }
-        .contact-btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #00f2fe, #0077fe);
-            color: #ffffff;
-            font-weight: 800;
-            padding: 12px 28px;
-            border-radius: 8px;
-            text-decoration: none;
-            margin-top: 14px;
-            box-shadow: 0 4px 15px rgba(0, 242, 254, 0.3);
-        }
-        a { color: #00f2fe; }
+        .badge { background: rgba(0, 242, 254, 0.15); color: #00f2fe; padding: 4px 10px; border-radius: 6px; font-weight: 700; font-size: 0.85rem; }
+        .contact { margin-top: 30px; background: rgba(0, 242, 254, 0.07); border: 1px solid rgba(0, 242, 254, 0.25); border-radius: 12px; padding: 20px; text-align: center; }
+        .btn { display: inline-block; margin-top: 8px; background: linear-gradient(135deg, #00f2fe, #0077fe); color: #fff; font-weight: 800; padding: 10px 22px; border-radius: 10px; }
+        a { color: #00f2fe; text-decoration: none; }
+        a:hover { text-decoration: underline; }
         .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.85rem; color: #64748b; text-align: center; }
+        @media (max-width: 600px) { .container { padding: 22px 16px; } h1 { font-size: 1.8rem; } }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Support & Help Center</h1>
-        <p>Welcome to the <strong>Neon Block Blast: Puzzle</strong> support page. Need help, want to report a bug, or have a suggestion? We're here for you!</p>
+        <span class="badge">Help Center</span>
+        <h1>Cyber Grid Support</h1>
+        <p>Need help, found a bug or have an idea? Check the answers below or contact us directly. We usually reply within 24 hours.</p>
 
-        <h2>Frequently Asked Questions (FAQ)</h2>
-        
-        <div class="faq-item">
-            <div class="faq-title">🎮 How does the scoring system work?</div>
-            <p>You score 50 points for every placed block. Clearing full horizontal or vertical lines awards massive bonuses (500 pts for 1 line, up to 10,000+ pts for multiple lines). Consecutive line clears trigger Combo Multipliers (x2, x3, x4...)!</p>
-        </div>
+        <h2>How to Play</h2>
+        <h3>🎮 Basics</h3>
+        <p>Drag the three shapes from the tray onto the 8x8 grid. Fill a complete row or column to clear it. Clearing several lines at once, or on consecutive moves, builds a combo multiplier. The game ends when none of your shapes fit on the grid.</p>
+        <h3>☣ Virus Protocol</h3>
+        <p>Every few moves a virus node lands on the grid. The number on it shows how many moves remain before it copies itself into a neighboring empty cell. Purge a virus by clearing the row or column it sits in, or by hitting it with a bomb. Each purge earns bonus points.</p>
+        <h3>🛡️ Firewall</h3>
+        <p>Every virus you purge charges your Firewall. When all three bars are full you get a free bomb (you can hold up to 5).</p>
+        <h3>🎲 Reroll and 💣 Bomb</h3>
+        <p>Reroll replaces the three shapes in your tray. Bomb clears a 3x3 area: tap the bomb button, then tap a cell. When you run out, the button changes to "Watch +1", which lets you watch an optional short video ad for one more use.</p>
 
-        <div class="faq-item">
-            <div class="faq-title">🏆 How does the Global Leaderboard work?</div>
-            <p>Your highest score is automatically synchronized to the Firebase Cloud Leaderboard. You can customize your nickname at any time by tapping the ✏️ edit icon on the Leaderboard screen.</p>
-        </div>
+        <h2>Leaderboard</h2>
+        <h3>🏆 How does it work?</h3>
+        <p>Your best score is synced automatically to the global leaderboard. You don't need an account.</p>
+        <h3>🎲 How do I change my player name?</h3>
+        <p>Open the Leaderboard and tap "New Name". Names are generated from a fixed list of words, so the leaderboard never shows offensive text.</p>
+        <h3>🗑️ How do I delete my leaderboard entry?</h3>
+        <p>Email us the player name shown on your Leaderboard screen and we will remove it within 30 days.</p>
 
-        <div class="faq-item">
-            <div class="faq-title">💣 What are the Power-ups?</div>
-            <p><strong>Reroll (🎲):</strong> Refreshes the three shapes in your tray.<br>
-            <strong>Bomb (💣):</strong> Tap the bomb icon, then tap any tile on the board to blast a 3x3 area!</p>
-        </div>
+        <h2>Other Questions</h2>
+        <h3>🔊 How do I mute the sound?</h3>
+        <p>Tap the speaker icon at the top of the screen.</p>
+        <h3>📡 Can I play offline?</h3>
+        <p>Yes, the puzzle works without an internet connection. The leaderboard and ads need a connection.</p>
 
-        <div class="faq-item">
-            <div class="faq-title">🔊 How can I mute sounds?</div>
-            <p>You can toggle audio effects on or off by tapping the 🔊 speaker icon in the top header.</p>
-        </div>
-
-        <div class="contact-card">
-            <h2 style="margin-top:0; color:#ffffff;">Still Need Assistance?</h2>
-            <p style="color:#cbd5e1;">Our support team usually responds within 24 hours.</p>
-            <a href="mailto:huseyinberat.dev@gmail.com?subject=Neon%20Block%20Blast%20Support" class="contact-btn">✉️ Contact Support Team</a>
-            <p style="margin-top:12px; font-size:0.85rem;">Or email us directly at: <strong>huseyinberat.dev@gmail.com</strong></p>
+        <div class="contact">
+            <p><strong>Still need help?</strong></p>
+            <a class="btn" href="mailto:huseyinberat.dev@gmail.com?subject=Cyber%20Grid%20Support">✉️ Contact Support</a>
+            <p>huseyinberat.dev@gmail.com</p>
         </div>
 
         <div class="footer">
-            &copy; 2026 Neon Block Blast: Puzzle &bull; <a href="privacy.html">Privacy Policy</a> &bull; <a href="terms.html">Terms of Service</a>
+            &copy; 2026 Cyber Grid: Neon Puzzle &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms of Use</a>
         </div>
     </div>
 </body>

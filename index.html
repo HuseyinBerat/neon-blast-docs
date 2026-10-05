@@ -3,224 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neon Block Blast - Cyber Block Puzzle Game</title>
+    <title>Cyber Grid: Neon Puzzle</title>
+    <meta name="description" content="Cyber Grid: Neon Puzzle — a neon block puzzle where viruses invade the grid. Clear lines, purge viruses, charge your Firewall.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Rajdhani:wght@700;900&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #00f2fe;
-            --accent: #ff3366;
-            --bg-dark: #0b0f19;
-            --card-bg: #131b2e;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--bg-dark);
-            color: var(--text-main);
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .ambient-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 20% 20%, rgba(0, 242, 254, 0.12) 0%, transparent 40%),
-                radial-gradient(circle at 80% 80%, rgba(255, 51, 102, 0.12) 0%, transparent 40%);
-            z-index: -1;
-            pointer-events: none;
-        }
-
-        .container {
-            max-width: 960px;
-            width: 100%;
-            padding: 60px 24px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        .logo-wrap {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: rgba(0, 242, 254, 0.1);
-            border: 1px solid rgba(0, 242, 254, 0.3);
-            padding: 8px 20px;
-            border-radius: 999px;
-            margin-bottom: 24px;
-            font-weight: 800;
-            color: var(--primary);
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            box-shadow: 0 0 20px rgba(0, 242, 254, 0.2);
-        }
-
-        h1 {
-            font-size: 3.2rem;
-            font-weight: 900;
-            letter-spacing: -1px;
-            margin-bottom: 16px;
-            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 50%, #ff3366 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero-desc {
-            font-size: 1.25rem;
-            color: var(--text-muted);
-            max-width: 640px;
-            margin-bottom: 36px;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
-            width: 100%;
-            margin: 40px 0;
-            text-align: left;
-        }
-
-        .feature-card {
-            background: var(--card-bg);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 16px;
-            padding: 28px;
-            transition: all 0.25s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-4px);
-            border-color: rgba(0, 242, 254, 0.3);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
-        }
-
-        .feature-icon {
-            font-size: 2rem;
-            margin-bottom: 16px;
-            display: inline-block;
-        }
-
-        .feature-title {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 8px;
-        }
-
-        .feature-text {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-        }
-
-        .footer-nav {
-            display: flex;
-            gap: 24px;
-            margin-top: 40px;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            width: 100%;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .footer-nav a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: color 0.2s;
-        }
-
-        .footer-nav a:hover {
-            color: var(--primary);
-        }
-
-        .copyright {
-            margin-top: 24px;
-            font-size: 0.85rem;
-            color: #64748b;
-        }
+        * { box-sizing: border-box; }
+        body { font-family: 'Outfit', -apple-system, sans-serif; margin: 0; color: #e2e8f0; background: radial-gradient(circle at 50% 0%, #171d3d 0%, #060814 70%); min-height: 100vh; }
+        .wrap { max-width: 960px; margin: 0 auto; padding: 56px 20px 40px; }
+        .logo { font-family: 'Rajdhani', sans-serif; font-weight: 900; font-size: 3rem; letter-spacing: 2px; text-align: center; margin: 0; }
+        .logo span { color: #00f2fe; text-shadow: 0 0 18px rgba(0, 242, 254, 0.6); }
+        .tagline { text-align: center; color: #94a3b8; font-size: 1.15rem; margin: 10px auto 40px; max-width: 620px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+        .card { background: rgba(22, 28, 52, 0.75); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 22px; }
+        .card h2 { margin: 0 0 6px; font-size: 1.15rem; color: #fff; }
+        .card p { margin: 0; color: #94a3b8; font-size: 0.97rem; line-height: 1.55; }
+        .card.virus { border-color: rgba(255, 43, 214, 0.45); box-shadow: 0 0 22px rgba(255, 43, 214, 0.15); }
+        .links { margin-top: 44px; text-align: center; display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+        .links a { color: #00f2fe; text-decoration: none; border: 1px solid rgba(0, 242, 254, 0.35); padding: 9px 18px; border-radius: 10px; font-weight: 700; }
+        .links a:hover { background: rgba(0, 242, 254, 0.1); }
+        footer { text-align: center; color: #64748b; font-size: 0.85rem; margin-top: 36px; }
     </style>
 </head>
 <body>
-    <div class="ambient-bg"></div>
+    <div class="wrap">
+        <h1 class="logo">💎 CYBER<span>GRID</span></h1>
+        <p class="tagline">A neon block puzzle under attack. Fill lines, stop the viruses before they spread, and climb the global leaderboard.</p>
 
-    <div class="container">
-        <div class="logo-wrap">
-            <span>💎</span> NEON BLOCK BLAST
-        </div>
-
-        <h1>Geleceğin Siber Blok Bulmaca Deneyimi</h1>
-        <p class="hero-desc">
-            Göz alıcı neon grafikleri, tatmin edici kristal parçalanma efektleri ve akıcı oyun mekanikleri ile zekanızı test edin.
-        </p>
-
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">💎</div>
-                <div class="feature-title">Göz Alıcı Neon Estetiği</div>
-                <div class="feature-text">Işıltılı siberpunk neon temaları, pürüzsüz animasyonlar ve modern tasarım.</div>
+        <div class="grid">
+            <div class="card virus">
+                <h2>☣ Virus Protocol</h2>
+                <p>Virus nodes land on the grid and copy themselves when their countdown runs out. Clear their row or column before they take over.</p>
             </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">💥</div>
-                <div class="feature-title">Dinamik Kombo Sistemi</div>
-                <div class="feature-text">Birden fazla satır patlatarak yüksek kombo serileri yakalayın ve rekorlar kırın.</div>
+            <div class="card">
+                <h2>🛡️ Firewall</h2>
+                <p>Each purged virus charges your Firewall. Fill it to earn a free 3x3 bomb.</p>
             </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">💣</div>
-                <div class="feature-title">Güçlendiriciler (Power-ups)</div>
-                <div class="feature-text">Sıkıştığınız anlarda 3x3 Alan Bombası ve Şekil Yenileme özelliklerini kullanın.</div>
+            <div class="card">
+                <h2>💥 Combos</h2>
+                <p>Clear several lines at once, or on back-to-back moves, to multiply your score.</p>
             </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">🏆</div>
-                <div class="feature-title">Küresel Liderlik Tablosu</div>
-                <div class="feature-text">Dünyanın dört bir yanındaki oyuncularla yarışın, en tepeye adınızı yazdırın.</div>
+            <div class="card">
+                <h2>🎲 Reroll &amp; 💣 Bomb</h2>
+                <p>Swap out a tough tray or blast a 3x3 area when you're stuck.</p>
             </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">🎵</div>
-                <div class="feature-title">Akustik Pop Sesleri</div>
-                <div class="feature-text">Rahatlatıcı ahşap marimba tonları ve tatmin edici dokunsal tıkırtılar.</div>
+            <div class="card">
+                <h2>🏆 Global Leaderboard</h2>
+                <p>Compete under an automatically generated player name. No account needed.</p>
             </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">📱</div>
-                <div class="feature-title">Çevrimdışı (Offline) Oynama</div>
-                <div class="feature-text">İnternet bağlantısı olmadan dilediğiniz her yerde tamamen ücretsiz oynayın.</div>
+            <div class="card">
+                <h2>📡 Play Offline</h2>
+                <p>The puzzle works anywhere, no connection required. Available in English and Turkish.</p>
             </div>
         </div>
 
-        <footer class="footer-nav">
-            <a href="privacy.html">Gizlilik Politikası (Privacy Policy)</a>
-            <a href="support.html">Destek (Support)</a>
-            <a href="terms.html">Kullanım Şartları (Terms of Service)</a>
-        </footer>
-
-        <div class="copyright">
-            © 2026 Neon Block Blast: Puzzle. Tüm hakları saklıdır.
+        <div class="links">
+            <a href="support.html">Support</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Use</a>
         </div>
+
+        <footer>&copy; 2026 Cyber Grid: Neon Puzzle &middot; Developed by Hüseyin Berat Yılmaz</footer>
     </div>
 </body>
 </html>
