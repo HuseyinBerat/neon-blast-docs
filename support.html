@@ -7,18 +7,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Outfit', -apple-system, sans-serif; line-height: 1.6; color: #e2e8f0; background: #0b0f19; margin: 0; padding: 40px 20px; }
-        .container { max-width: 800px; margin: 0 auto; background: #131b2e; padding: 36px; border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); }
-        h1 { color: #00f2fe; font-size: 2.2rem; margin-top: 0; }
-        h2 { color: #38bdf8; font-size: 1.3rem; margin-top: 30px; }
-        h3 { color: #e2e8f0; font-size: 1.05rem; margin: 20px 0 4px; }
-        p, li { color: #94a3b8; font-size: 0.98rem; }
-        .badge { background: rgba(0, 242, 254, 0.15); color: #00f2fe; padding: 4px 10px; border-radius: 6px; font-weight: 700; font-size: 0.85rem; }
-        .contact { margin-top: 30px; background: rgba(0, 242, 254, 0.07); border: 1px solid rgba(0, 242, 254, 0.25); border-radius: 12px; padding: 20px; text-align: center; }
-        .btn { display: inline-block; margin-top: 8px; background: linear-gradient(135deg, #00f2fe, #0077fe); color: #fff; font-weight: 800; padding: 10px 22px; border-radius: 10px; }
-        a { color: #00f2fe; text-decoration: none; }
+        body { font-family: 'Outfit', -apple-system, sans-serif; line-height: 1.6; color: #F5EFE2; background: #0B1411; margin: 0; padding: 40px 20px; }
+        .container { max-width: 800px; margin: 0 auto; background: #14241C; padding: 36px; border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); }
+        h1 { color: #E39B4A; font-size: 2.2rem; margin-top: 0; }
+        h2 { color: #34C38F; font-size: 1.3rem; margin-top: 30px; }
+        h3 { color: #F5EFE2; font-size: 1.05rem; margin: 20px 0 4px; }
+        p, li { color: #A9B8AE; font-size: 0.98rem; }
+        .badge { background: rgba(227, 155, 74, 0.15); color: #E39B4A; padding: 4px 10px; border-radius: 6px; font-weight: 700; font-size: 0.85rem; }
+        .contact { margin-top: 30px; background: rgba(227, 155, 74, 0.07); border: 1px solid rgba(227, 155, 74, 0.25); border-radius: 12px; padding: 20px; text-align: center; }
+        .btn { display: inline-block; margin-top: 8px; background: linear-gradient(135deg, #E39B4A, #B8732F); color: #fff; font-weight: 800; padding: 10px 22px; border-radius: 10px; }
+        a { color: #E39B4A; text-decoration: none; }
         a:hover { text-decoration: underline; }
-        .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.85rem; color: #64748b; text-align: center; }
+        .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.85rem; color: #7E9186; text-align: center; }
         @media (max-width: 600px) { .container { padding: 22px 16px; } h1 { font-size: 1.8rem; } }
     </style>
 </head>
@@ -34,15 +34,19 @@
         <h3>☣ Virus Protocol</h3>
         <p>Every few moves a virus node lands on the grid. The number on it shows how many moves remain before it copies itself into a neighboring empty cell. Purge a virus by clearing the row or column it sits in, or by hitting it with a bomb. Each purge earns bonus points.</p>
         <h3>🛡️ Firewall</h3>
-        <p>Every virus you purge charges your Firewall. When all three bars are full you get a free bomb (you can hold up to 5).</p>
+        <p>Every virus you purge by clearing a line charges your Firewall. When it is full you get a free bomb (you can hold up to 3). The first bomb takes 3 purges and each next one takes 2 more. Viruses destroyed with a bomb don't charge the Firewall.</p>
+        <h3>☣ Threat Level</h3>
+        <p>The longer you survive, the higher the Threat Level: viruses arrive more often and spread faster.</p>
         <h3>🎲 Reroll and 💣 Bomb</h3>
         <p>Reroll replaces the three shapes in your tray. Bomb clears a 3x3 area: tap the bomb button, then tap a cell. When you run out, the button changes to "Watch +1", which lets you watch an optional short video ad for one more use.</p>
 
         <h2>Leaderboard</h2>
         <h3>🏆 How does it work?</h3>
         <p>Your best score is synced automatically to the global leaderboard. You don't need an account.</p>
-        <h3>🎲 How do I change my player name?</h3>
-        <p>Open the Leaderboard and tap "New Name". Names are generated from a fixed list of words, so the leaderboard never shows offensive text.</p>
+        <h3>✏️ How do I change my player name?</h3>
+        <p>Open the Leaderboard, type a name (3–16 characters) and tap "Save", or tap 🎲 for a random one. Offensive names are blocked automatically.</p>
+        <h3>⚑ How do I report or hide an offensive name?</h3>
+        <p>Tap ⚑ next to the name on the Leaderboard and confirm. The player is hidden from your leaderboard immediately and your report is sent to us. We review reports within 24 hours and remove offending names. To see hidden players again, tap "Show hidden players" at the bottom of the Leaderboard.</p>
         <h3>🗑️ How do I delete my leaderboard entry?</h3>
         <p>Email us the player name shown on your Leaderboard screen and we will remove it within 30 days.</p>
 
